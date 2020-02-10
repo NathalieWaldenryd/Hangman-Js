@@ -1,0 +1,87 @@
+svg#hangman_svg {
+    margin: 20px auto;
+    display: block;
+}
+
+html {
+    background: linear-gradient(180deg, rgb(75, 127, 240) 50%, #26e445 50%);
+    height: 100%;
+}
+
+button {
+    font-size: 120%;
+}
+
+#Alphabet {
+    text-align: center;
+    user-select: none;
+}
+
+#Alphabet.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+#Word {
+    padding-top: 1em;
+    text-align: center;
+}
+
+#Word span {
+    font-size: 20px;
+    padding: 5px;
+    position: relative;
+    margin: 0 5px;
+}
+
+#Word span::after {
+    content: "_";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#Word span[data-letter=" "]::after {
+    content: " ";
+}
+
+#Word[data-display*="a"] span[data-letter="a"]::after,
+#Word[data-display*="b"] span[data-letter="b"]::after,
+#Word[data-display*="c"] span[data-letter="c"]::after,
+#Word[data-display*="d"] span[data-letter="d"]::after,
+#Word[data-display*="e"] span[data-letter="e"]::after,
+#Word[data-display*="f"] span[data-letter="f"]::after,
+#Word[data-display*="g"] span[data-letter="g"]::after,
+#Word[data-display*="h"] span[data-letter="h"]::after,
+#Word[data-display*="i"] span[data-letter="i"]::after,
+#Word[data-display*="j"] span[data-letter="j"]::after,
+#Word[data-display*="k"] span[data-letter="k"]::after,
+#Word[data-display*="l"] span[data-letter="l"]::after,
+#Word[data-display*="m"] span[data-letter="m"]::after,
+#Word[data-display*="n"] span[data-letter="n"]::after,
+#Word[data-display*="o"] span[data-letter="o"]::after,
+#Word[data-display*="p"] span[data-letter="p"]::after,
+#Word[data-display*="q"] span[data-letter="q"]::after,
+#Word[data-display*="r"] span[data-letter="r"]::after,
+#Word[data-display*="s"] span[data-letter="s"]::after,
+#Word[data-display*="t"] span[data-letter="t"]::after,
+#Word[data-display*="u"] span[data-letter="u"]::after,
+#Word[data-display*="v"] span[data-letter="v"]::after,
+#Word[data-display*="w"] span[data-letter="w"]::after,
+#Word[data-display*="x"] span[data-letter="x"]::after,
+#Word[data-display*="y"] span[data-letter="y"]::after,
+#Word[data-display*="å"] span[data-letter="å"]::after,
+#Word[data-display*="ä"] span[data-letter="ä"]::after,
+#Word[data-display*="ö"] span[data-letter="ö"]::after,
+#Word[data-display*="z"] span[data-letter="z"]::after {
+    content: attr(data-letter);
+}
+
+#Message {
+    margin: 10px;
+    text-align: center;
+    font-size: 150%;
+    color: #4b82ec;
+    text-decoration: underline;
+}
+
